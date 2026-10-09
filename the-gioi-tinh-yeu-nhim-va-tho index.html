@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0df">
+<title>Thế giới tình yêu của Nhím và Thỏ 💗</title>
+<style>
+:root{--peach:#ffb878;--peach2:#ffe0bd;--pink:#ff9db8;--cream:#fff8ef;--brown:#704b3c;--mint:#bfe8d2;--purple:#d9c7ff}
+*{box-sizing:border-box}body{margin:0;font-family:"Trebuchet MS",system-ui,sans-serif;color:var(--brown);background:radial-gradient(circle at top,#fff9ee,#ffe9d5 60%,#ffd6c2);min-height:100vh}
+button,input{font:inherit}button{cursor:pointer;border:0;border-radius:999px;padding:12px 20px;background:linear-gradient(135deg,#ffb878,#ff8fa9);color:#fff;font-weight:800;box-shadow:0 5px 0 #e99483;transition:.15s}button:hover{transform:translateY(-2px)}button:active{transform:translateY(2px);box-shadow:0 2px 0 #e99483}
+button.secondary{background:#fffaf3;color:#9a6a56;border:2px solid #ffd1ae;box-shadow:none}button:disabled{opacity:.45;cursor:not-allowed;transform:none}
+header{text-align:center;padding:22px 14px 8px}h1{font-size:clamp(1.5rem,5vw,2.5rem);margin:5px 0;color:#d66f70}header p{margin:6px auto;max-width:650px}.rainbow{height:7px;max-width:450px;margin:15px auto;border-radius:9px;background:linear-gradient(90deg,#ff8c8c,#ffc36b,#fff18b,#9cdeb1,#8bcaff,#c4a3ff,#ff9ed0)}
+.wrap{width:min(920px,94%);margin:12px auto 40px}.panel{background:rgba(255,252,246,.9);border:2px solid #fff;border-radius:26px;padding:clamp(16px,4vw,30px);box-shadow:0 12px 30px #bc79501c;margin:14px 0}.hidden{display:none!important}.eyebrow{display:inline-block;background:#fff0df;color:#bf785d;border-radius:99px;padding:7px 13px;font-size:.82rem;font-weight:800;letter-spacing:.04em}.center{text-align:center}.big{font-size:3rem;line-height:1.2}.muted{color:#a17b6c}.row{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap}.story{font-size:1.05rem;line-height:1.8}.notice{background:#fff0f3;border-radius:18px;padding:12px 15px;margin:14px auto;max-width:650px}.progress{height:9px;background:#f9e3d3;border-radius:20px;overflow:hidden;margin:15px auto;max-width:500px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffb878,#ff86b2);transition:width .3s}
+.maze{display:grid;grid-template-columns:repeat(9,minmax(24px,1fr));gap:4px;max-width:480px;margin:20px auto;padding:8px;background:#f7cda8;border-radius:18px;border:4px solid #efb98e}.cell{aspect-ratio:1;border-radius:7px;background:#fff4e7;display:grid;place-items:center;font-size:clamp(14px,3vw,24px);min-width:0}.cell.wall{background:#e9a574}.cell.path{background:#fff9f0}.cell.player{background:#ffd1df;outline:3px solid #ff91b4}.cell.finish{background:#c6efd6}.cell.carrot{background:#ffe6a8}.controls{display:grid;grid-template-columns:repeat(3,48px);gap:7px;justify-content:center;margin:12px auto}.controls button{padding:9px;border-radius:14px}.controls .blank{visibility:hidden}
+.answer{display:flex;align-items:center;gap:9px;width:min(100%,380px);margin:8px auto;padding:12px 14px;border:2px solid #f6d9c7;border-radius:15px;background:#fffaf4;color:#795747;box-shadow:none;text-align:left}.answer.selected{border-color:#ff8eae;background:#fff0f4}.answer .heartpair{font-size:1.4rem}.answer input{accent-color:#f27e9f}
+input[type=text]{width:min(100%,340px);padding:13px 15px;border:2px solid #f1cbb6;border-radius:14px;background:#fffdf9;color:#704b3c;outline:none}input:focus{border-color:#ff91b4}
+.heartmap{position:relative;width:min(100%,500px);margin:16px auto;padding:12px;border-radius:24px;background:linear-gradient(145deg,#fff0f4,#ffe4cb);min-height:330px;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:repeat(6,44px);gap:5px;align-content:center}
+.mapcell{border-radius:12px;display:grid;place-items:center;font-size:1.5rem;background:#ffffff80;position:relative}.mapcell.off{visibility:hidden}.mapcell.player{background:#ffd0df;outline:2px solid #ff82a8}.mapcell.hasheart{cursor:pointer}.mapcell.got{opacity:.45}.maphelp{font-size:.9rem}
+.songlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:9px;max-width:700px;margin:18px auto}.song{border-radius:14px;padding:12px;background:#fff9f1;border:2px solid #f3d9c6;color:#795747;box-shadow:none}.song.selected{border-color:#ff8bac;background:#fff0f4;color:#bd5c7c}
+.solar{display:grid;grid-template-columns:repeat(3,minmax(80px,1fr));gap:14px;max-width:650px;margin:22px auto}.planet{border-radius:22px;padding:13px 7px;background:#fff9f2;border:2px solid #fff;box-shadow:0 6px 0 #f2d9c5;color:#704b3c}.planet .orb{display:block;font-size:2.3rem;margin-bottom:5px}.planet.opened{background:#fff0f4;border-color:#ff9fba}.letter{background:#fffdf8;border:2px dashed #e8b69a;border-radius:20px;padding:22px;max-width:640px;margin:16px auto;text-align:left;line-height:1.9;white-space:pre-line}.letter .sign{text-align:right;color:#d66f86;font-weight:800;margin-top:18px}.footer{text-align:center;padding:10px;color:#aa806e;font-size:.85rem}
+@media(max-width:500px){.panel{padding:15px}.maze{gap:3px;padding:5px}.cell{border-radius:4px}.heartmap{grid-template-rows:repeat(6,36px);gap:3px;padding:7px}.solar{gap:8px}.planet{padding:10px 4px}.planet .orb{font-size:1.9rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">🌈 7 sắc cầu vồng · phiên bản dành riêng cho anh</div>
+  <h1>Thế giới tình yêu của Nhím & Thỏ 💗</h1>
+  <p>Một chuyến phiêu lưu nho nhỏ, nơi mỗi bước chân đều có một lời thương.</p>
+  <div class="rainbow"></div>
+</header>
+<main class="wrap">
+<section id="intro" class="panel center">
+  <div class="big">🦔 💞 🐰</div>
+  <h2>Chào mừng anh đến thế giới của tụi mình!</h2>
+  <p class="story">Nhím đang đi tìm Thỏ. Anh hãy giúp Nhím vượt qua mê cung, gom đủ trái tim và mở những bí mật em gửi nhé.</p>
+  <button onclick="startGame()">Bắt đầu cuộc phiêu lưu ✨</button>
+</section>
+
+<section id="level1" class="panel hidden">
+  <div class="eyebrow">LEVEL 1 · LỐI VÀO MÊ CUNG BÍ MẬT</div>
+  <h2 class="center">Giúp Nhím tìm đường đến Thỏ 🦔</h2>
+  <p class="center muted">Dùng các phím mũi tên hoặc nút điều khiển. Trên đường đi, anh sẽ gặp 3 củ cà rốt và câu hỏi bí mật!</p>
+  <div class="maze" id="maze"></div>
+  <div class="controls">
+    <button class="blank">·</button><button onclick="move(0,-1)" aria-label="Lên">⬆️</button><button class="blank">·</button>
+    <button onclick="move(-1,0)" aria-label="Trái">⬅️</button><button onclick="move(0,1)" aria-label="Xuống">⬇️</button><button onclick="move(1,0)" aria-label="Phải">➡️</button>
+  </div>
+  <p class="center muted" id="mazeStatus">Tìm đường đi nào anh ơi!</p>
+  <div class="progress"><span id="mazeProgress"></span></div>
+</section>
+
+<section id="question" class="panel center hidden">
+  <div class="big" id="qEmoji">🥕</div><div class="eyebrow" id="qCount">CÂU HỎI 1/3</div>
+  <h2 id="qTitle"></h2><p class="muted" id="qSub"></p>
+  <div id="qOptions"></div>
+  <div id="qFeedback" class="notice hidden"></div>
+  <div class="row"><button id="qSubmit" onclick="checkAnswer()">Trả lời nè 💗</button><button id="qNext" class="hidden" onclick="continueMaze()">Đi tiếp thôi</button></div>
+</section>
+
+<section id="level2" class="panel hidden">
+  <div class="eyebrow">LEVEL 2 · BẢN ĐỒ TRÁI TIM</div>
+  <h2 class="center">Thu thập 10 trái tim của chúng mình 💕</h2>
+  <p class="center story">Đi quanh bản đồ hình trái tim để tìm đủ 10 trái tim nhé. Dùng phím mũi tên hoặc các nút bên dưới.</p>
+  <div class="heartmap" id="heartmap"></div>
+  <p class="center"><strong id="heartCount">Đã có: 0/10 trái tim</strong></p>
+  <div class="controls">
+    <button class="blank">·</button><button onclick="moveMap(0,-1)">⬆️</button><button class="blank">·</button>
+    <button onclick="moveMap(-1,0)">⬅️</button><button onclick="moveMap(0,1)">⬇️</button><button onclick="moveMap(1,0)">➡️</button>
+  </div>
+  <p class="center muted maphelp">Mẹo nhỏ: Nhím có thể bước vào ô có trái tim để nhặt được nha!</p>
+  <div class="center"><button id="letterButton" disabled onclick="showLevel2Letter()">Mở lá thư bí mật 💌</button></div>
+</section>
+
+<section id="level2letter" class="panel center hidden">
+  <div class="big">💌</div><div class="eyebrow">MỘT LỜI NHẮN NHỎ</div>
+  <div class="letter">Anh iu à,
+
+Em thích cách anh luôn cố gắng vì những điều mình muốn, thích những điều anh làm cho em khi em còn chưa nói ra. Em thấy anh dễ thương khi anh cười đó nha ^^
+
+<span class="sign">Thỏ gửi Nhím 🐰💕</span></div>
+  <button onclick="show('level3')">Đến chặng tiếp theo nha →</button>
+</section>
+
+<section id="level3" class="panel center hidden">
+  <div class="eyebrow">LEVEL 3 · GIAI ĐIỆU CỦA ANH</div><div class="big">🎧💗</div>
+  <h2>Chọn bài hát anh yêu thích nhé!</h2>
+  <p class="muted">Không có đáp án đúng hay sai đâu, anh cứ chọn bài mình thích nhất nha.</p>
+  <div id="songList" class="songlist"></div>
+  <button onclick="confirmSong()">OK, anh chọn bài này 🎶</button>
+  <div id="songResult" class="notice hidden"></div>
+  <button id="toSpace" class="hidden" onclick="show('space')">Tiếp tục 🚀</button>
+</section>
+
+<section id="space" class="panel center hidden">
+  <div class="eyebrow">NGÂN HÀ TÌNH YÊU</div><h2>Chạm vào 9 thiên thể để mở 9 lá thư 💌</h2>
+  <p class="muted">Mỗi hành tinh và mặt trời đều cất giấu một lời nhắn từ Thỏ.</p>
+  <div class="solar" id="solar"></div>
+  <p id="planetProgress" class="muted">Đã mở 0/9 lá thư</p>
+  <div id="planetLetter" class="letter hidden"></div>
+  <button id="endingButton" class="hidden" onclick="show('ending')">Đến lời nhắn cuối cùng 💗</button>
+</section>
+
+<section id="ending" class="panel center hidden">
+  <div class="big">🌈💗🦔🐰💗🌈</div>
+  <h1>Em yêu anh</h1>
+  <p class="story">Cảm ơn anh đã đi hết hành trình nhỏ này cùng em.</p>
+  <p class="story">Mong rằng dù ở đâu, chúng mình vẫn luôn dịu dàng với nhau, cùng cố gắng và cùng lớn lên nhé.</p>
+  <div class="big">💗</div><p><strong>Thỏ của anh 🐰</strong></p>
+  <button class="secondary" onclick="location.reload()">Chơi lại từ đầu ↻</button>
+</section>
+<div class="footer">Được làm bằng thật nhiều thương mến ♡</div>
+</main>
+<script>
+const sections=['intro','level1','question','level2','level2letter','level3','space','ending'];
+function show(id){sections.forEach(s=>document.getElementById(s).classList.toggle('hidden',s!==id));window.scrollTo({top:0,behavior:'smooth'})}
+function startGame(){show('level1');drawMaze()}
+const mazeLayout=[
+'#########',
+'#S..#...#',
+'###.#.#.#',
+'#...C.#.#',
+'#.###.#.#',
+'#C....C.#',
+'#.#####.#',
+'#.......#',
+'#########'
+];
+// Walkable path coordinates, with three carrot checkpoints along the route.
+const route=[[1,1],[2,1],[3,1],[3,2],[3,3],[2,3],[1,3],[1,4],[1,5],[2,5],[3,5],[4,5],[5,5],[5,6],[5,7],[6,7],[7,7]];
+let routeIndex=0, carrotStops=[4,8,12], answered=new Set(), activeQuestion=0, questionDone=false;
+const questions=[
+ {title:'Thỏ thích màu gì?',sub:'Chọn màu mà Thỏ yêu thích nha.',options:['💗 Màu hồng','💙 Màu xanh dương'],correct:0,reply:'Đúng rùi đó, anh iu! 💗 Thỏ thích màu hồng nè!'},
+ {title:'Cung hoàng đạo của Thỏ là gì?',sub:'Anh có nhớ không nè?',options:['♓ Song Ngư','♌ Sư Tử','♑ Ma Kết'],correct:0,reply:'Chính xác rùi! Anh nhớ giỏi quá, iu anh 🐰💕'},
+ {title:'Thỏ thích hoa gì?',sub:'Bật mí là một bông hoa vàng rực rỡ đó!',options:['🌹 Hoa hồng','🌻 Hoa hướng dương','🌷 Hoa tulip'],correct:1,reply:'Đúng rùi, anh iu! 🌻 Mong tụi mình luôn hướng về những điều tốt đẹp.'}
+];
+function drawMaze(){
+ const el=document.getElementById('maze');el.innerHTML='';
+ for(let y=0;y<9;y++)for(let x=0;x<9;x++){
+  const c=document.createElement('div');c.className='cell';
+  const key=`${x},${y}`, idx=route.findIndex(p=>p[0]===x&&p[1]===y);
+  const wall=mazeLayout[y][x]==='#' && idx<0;
+  if(wall)c.classList.add('wall');else c.classList.add('path');
+  if(idx>=0&&carrotStops.includes(idx)&&!answered.has(carrotStops.indexOf(idx))){c.classList.add('carrot');c.textContent='🥕'}
+  if(x===7&&y===7){c.classList.add('finish');c.textContent='🐰'}
+  if(idx===routeIndex){c.classList.add('player');c.textContent='🦔'}
+  el.appendChild(c);
+ }
+ document.getElementById('mazeProgress').style.width=(routeIndex/(route.length-1)*100)+'%';
+}
+function move(dx,dy){
+ if(!document.getElementById('level1').classList.contains('hidden')===false)return;
+ const [x,y]=route[routeIndex], next=route.findIndex(p=>p[0]===x+dx&&p[1]===y+dy);
+ if(next<0){document.getElementById('mazeStatus').textContent='Ối, đường này bị chặn rồi. Thử hướng khác nha!';return}
+ routeIndex=next;drawMaze();
+ const qIndex=carrotStops.indexOf(routeIndex);
+ if(qIndex>=0&&!answered.has(qIndex)){activeQuestion=qIndex;openQuestion(qIndex);return}
+ if(routeIndex===route.length-1){document.getElementById('mazeStatus').textContent='Nhím đã gặp được Thỏ rồi! 💗';setTimeout(()=>{show('level2');drawMap()},700)}
+ else document.getElementById('mazeStatus').textContent='Đi đúng đường rồi đó! Tiếp tục nha 💕';
+}
+function openQuestion(i){
+ show('question');questionDone=false;const q=questions[i];
+ document.getElementById('qEmoji').textContent='🥕';document.getElementById('qCount').textContent=`CÂU HỎI ${i+1}/3`;
+ document.getElementById('qTitle').textContent=q.title;document.getElementById('qSub').textContent=q.sub;
+ document.getElementById('qFeedback').classList.add('hidden');document.getElementById('qSubmit').classList.remove('hidden');document.getElementById('qNext').classList.add('hidden');
+ const opts=document.getElementById('qOptions');opts.innerHTML='';
+ q.options.forEach((o,j)=>{const b=document.createElement('button');b.className='answer';b.textContent=o;b.onclick=()=>{opts.querySelectorAll('button').forEach(z=>z.classList.remove('selected'));b.classList.add('selected');b.dataset.choice=j};opts.appendChild(b)});
+}
+function checkAnswer(){
+ const chosen=document.querySelector('#qOptions .selected');if(!chosen){document.getElementById('qFeedback').textContent='Anh chọn một đáp án trước nha 💗';document.getElementById('qFeedback').classList.remove('hidden');return}
+ const q=questions[activeQuestion],fb=document.getElementById('qFeedback');
+ if(Number(chosen.dataset.choice)===q.correct){fb.textContent=q.reply;answered.add(activeQuestion);questionDone=true;document.getElementById('qSubmit').classList.add('hidden');document.getElementById('qNext').classList.remove('hidden')}
+ else{fb.textContent='Gần đúng rùi nè, anh thử lại nhé. Thỏ tin anh! 🐰';}
+ fb.classList.remove('hidden');
+}
+function continueMaze(){show('level1');drawMaze();document.getElementById('mazeStatus').textContent='Giỏi quá! Tiếp tục tìm đường đến Thỏ nha 💗'}
+document.addEventListener('keydown',e=>{
+ const map={'ArrowUp':[0,-1],'ArrowDown':[0,1],'ArrowLeft':[-1,0],'ArrowRight':[1,0]};
+ if(map[e.key]){e.preventDefault();if(!document.getElementById('level1').classList.contains('hidden'))move(...map[e.key]);else if(!document.getElementById('level2').classList.contains('hidden'))moveMap(...map[e.key])}
+});
+const mapShape=[
+ [0,0,1,1,1,0,0],[0,1,1,1,1,1,0],[1,1,1,1,1,1,1],
+ [0,1,1,1,1,1,0],[0,0,1,1,1,0,0],[0,0,0,1,0,0,0]
+];
+let mapPos=[3,5], hearts=new Set(), heartLocations=[[2,0],[3,0],[4,0],[1,1],[5,1],[0,2],[2,2],[4,2],[6,2],[3,4]];
+function drawMap(){
+ const el=document.getElementById('heartmap');el.innerHTML='';
+ for(let y=0;y<6;y++)for(let x=0;x<7;x++){
+  const c=document.createElement('div');c.className='mapcell';
+  if(!mapShape[y][x])c.classList.add('off');
+  const hi=heartLocations.findIndex(p=>p[0]===x&&p[1]===y);
+  if(hi>=0){c.classList.add('hasheart');c.textContent=hearts.has(hi)?'✨':'💗'}
+  if(mapPos[0]===x&&mapPos[1]===y){c.classList.add('player');c.textContent='🦔'}
+  el.appendChild(c);
+ }
+ document.getElementById('heartCount').textContent=`Đã có: ${hearts.size}/10 trái tim`;
+ document.getElementById('letterButton').disabled=hearts.size<10;
+}
+function moveMap(dx,dy){
+ if(document.getElementById('level2').classList.contains('hidden'))return;
+ let nx=mapPos[0]+dx,ny=mapPos[1]+dy;
+ if(nx<0||nx>6||ny<0||ny>5||!mapShape[ny][nx])return;
+ mapPos=[nx,ny];const hi=heartLocations.findIndex(p=>p[0]===nx&&p[1]===ny);
+ if(hi>=0)hearts.add(hi);drawMap();
+ if(hearts.size===10)document.getElementById('heartCount').textContent='Đủ 10 trái tim rồi! Anh mở thư nha 💌';
+}
+function showLevel2Letter(){show('level2letter')}
+const songs=['Mình anh thôi','Để dành cho em','Anh đã ổn hơn','Va vào giai điệu này','Chìm sâu','Vạn vật như muốn ta bên nhau','Nơi ta chờ em','Để tôi ôm em bằng giai điệu này','Nếu như ta chẳng còn','Từng ngày yêu em','Miên man','Chờ anh nhé'];
+let selectedSong='';
+function initSongs(){const el=document.getElementById('songList');songs.forEach(s=>{const b=document.createElement('button');b.className='song';b.textContent='♫ '+s;b.onclick=()=>{el.querySelectorAll('.song').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');selectedSong=s};el.appendChild(b)})}
+function confirmSong(){if(!selectedSong){document.getElementById('songResult').textContent='Anh chọn một bài hát trước nha 🎵';document.getElementById('songResult').classList.remove('hidden');return}
+ document.getElementById('songResult').textContent=`Anh chọn “${selectedSong}” nè! 💗 Anh thích nhất là bài gì hiện tại? Có nằm trong danh sách này không nè, nói em nghe nhé!`;
+ document.getElementById('songResult').classList.remove('hidden');document.getElementById('toSpace').classList.remove('hidden')}
+const letters=[
+'Khoảng cách khiến chúng mình không thể gặp nhau mỗi khi muốn, nhưng em hy vọng chúng mình vẫn sẽ có nhau như vậy, chỉ giản đơn vậy thôi',
+'Anh đừng suy nghĩ nhiều nhé. Tình cảm em dành cho anh là thật và em cần nhiều thời gian hơn để “thích nghi” thui. Yêu anh nhiều lắm đó nha :3',
+'Em không biết tương lai sẽ có những điều gì chờ đợi chúng mình, nhưng em mong cả hai sẽ luôn cố gắng để trở thành những phiên bản tốt hơn của chính mình. Em muốn được nhìn thấy anh trưởng thành, hạnh phúc và sống cuộc đời mà anh tự hào. Và em hy vọng mình cũng vậy. Yêu anh. 💗',
+'Hôm nay thế nào cũng được, miễn là anh đã cố gắng và vẫn chăm sóc tốt cho bản thân. Ngủ ngon nhé, chàng trai của em. ❤️',
+'Có thể em không hiểu hết những khó khăn anh đang trải qua, nhưng em biết anh đang cố gắng. Em tin anh và muốn đồng hành cùng anh 🐰💕🦔',
+'Anh nè, hôm nay anh đã vất vả rồi. Đừng ép bản thân phải làm mọi thứ thật hoàn hảo nhé. Nghỉ ngơi một chút cũng là cách để tiếp tục tiến về phía trước. Em mong anh luôn khỏe mạnh và bình an.',
+'Em rất trân trọng việc anh nghiêm túc với những điều mình đã lựa chọn. Sự trách nhiệm ấy khiến em cảm thấy anh là người đáng để tin tưởng và tôn trọng.',
+'Em thích nụ cười của anh lắm. Nó dễ thương á. Có những lúc chỉ cần nhìn thấy anh cười thôi là tâm trạng em cũng tốt lên theo nè',
+'Em chỉ muốn bên anh thôi 💕🦔'
+];
+const planets=[['☀️','Mặt Trời'],['🌍','Trái Đất'],['🪐','Sao Thổ'],['🔴','Sao Hỏa'],['🩵','Sao Hải Vương'],['🟡','Sao Mộc'],['💜','Sao Thiên Vương'],['🌕','Mặt Trăng'],['✨','Sao Nhỏ']];
+let opened=new Set();
+function initSolar(){const el=document.getElementById('solar');planets.forEach((p,i)=>{const b=document.createElement('button');b.className='planet';b.innerHTML=`<span class="orb">${p[0]}</span>${p[1]}<br><small>Thư ${i+1}</small>`;b.onclick=()=>openPlanet(i,b);el.appendChild(b)})}
+function openPlanet(i,b){opened.add(i);document.querySelectorAll('.planet').forEach(x=>x.classList.remove('opened'));b.classList.add('opened');
+ const body=letters[i]||'Em chỉ muốn bên anh thôi 💕🦔';
+ const el=document.getElementById('planetLetter');el.classList.remove('hidden');el.innerHTML=`<strong>Dear anh iu dấu,</strong><br><br>${body.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')}<div class="sign">Thỏ của anh 🐰💗</div>`;
+ document.getElementById('planetProgress').textContent=`Đã mở ${opened.size}/9 lá thư`;
+ if(opened.size===9)document.getElementById('endingButton').classList.remove('hidden');
+}
+initSongs();initSolar();
+</script>
+</body>
+</html>
